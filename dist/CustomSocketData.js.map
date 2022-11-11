@@ -1,0 +1,1 @@
+{"version":3,"file":"CustomSocketData.js","sourceRoot":"","sources":["../src/CustomSocketData.ts"],"names":[],"mappings":"","sourcesContent":["export interface CustomSocketData {\n\tfollowingRestaurants?: Array<string>;\n}\n"]}

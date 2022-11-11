@@ -1,0 +1,1 @@
+{"version":3,"file":"Contact.js","sourceRoot":"","sources":["../src/Contact.ts"],"names":[],"mappings":"","sourcesContent":["export interface Contact {\r\n\ttel: string;\r\n\temail: string;\r\n}\r\n"]}

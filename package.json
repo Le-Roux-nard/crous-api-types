@@ -1,0 +1,30 @@
+{
+  "name": "@crous-api/crous-api-types",
+  "version": "1.0.0",
+  "description": "Types for package crous-api-wrapper",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "npx rimraf dist/ types/ && ttsc"
+  },
+  "author": "Le_Roux-Nard",
+  "license": "MIT",
+  "dependencies": {
+    "ts-transformer-keys": "^0.4.3",
+    "ttypescript": "^1.5.13"
+  },
+  "devDependencies": {
+    "tslib": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Le-Roux-nard/crous-api-types.git"
+  },
+  "keywords": [
+    "crous"
+  ],
+  "bugs": {
+    "url": "https://github.com/Le-Roux-nard/crous-api-types/issues"
+  },
+  "homepage": "https://github.com/Le-Roux-nard/crous-api-types#readme"
+}
