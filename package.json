@@ -1,7 +1,7 @@
 {
-  "name": "@crous-api/crous-api-types",
+  "name": "crous-api-types",
   "version": "1.0.0",
-  "description": "Types for package crous-api-wrapper",
+  "description": "Types for crous-api api & wrapper",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
