@@ -10,4 +10,5 @@ export * from "./Position.js";
 export * from "./Residence.js";
 export * from "./Restaurant.js";
 export * from "./Utils.js";
+export * from "./CustomHolidays";
 //# sourceMappingURL=index.d.ts.map

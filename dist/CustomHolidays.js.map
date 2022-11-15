@@ -1,0 +1,1 @@
+{"version":3,"file":"CustomHolidays.js","sourceRoot":"","sources":["../src/CustomHolidays.ts"],"names":[],"mappings":";;AAAA,IAAK,wBAEJ;AAFD,WAAK,wBAAwB;IAC5B,6GAAoB,CAAA;AACrB,CAAC,EAFI,wBAAwB,KAAxB,wBAAwB,QAE5B","sourcesContent":["enum PlacesWithCustomHolidays {\r\n\t\"Le Mans Université\",\r\n}\r\n\r\nexport type CustomHolidays = keyof typeof PlacesWithCustomHolidays;"]}

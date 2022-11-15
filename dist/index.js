@@ -13,4 +13,5 @@ tslib_1.__exportStar(require("./Position.js"), exports);
 tslib_1.__exportStar(require("./Residence.js"), exports);
 tslib_1.__exportStar(require("./Restaurant.js"), exports);
 tslib_1.__exportStar(require("./Utils.js"), exports);
+tslib_1.__exportStar(require("./CustomHolidays"), exports);
 //# sourceMappingURL=index.js.map
