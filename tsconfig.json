@@ -15,9 +15,8 @@
 		"noUncheckedIndexedAccess": true,
 
 		// Modules
-		"module": "CommonJS",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
+		"module": "ESNext",
+		"moduleResolution": "nodenext",
 
 		// Emit
 		"declaration": true,
@@ -26,21 +25,23 @@
 		"importHelpers": true,
 		"inlineSources": true,
 		"newLine": "lf",
-		"noEmitHelpers": true,
+		"noEmitHelpers": false,
 		"outDir": "dist",
 		"preserveConstEnums": true,
 		"removeComments": false,
 		"sourceMap": true,
-		"esModuleInterop": true,
+		// "esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 
 		// Language and Environment
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"baseUrl": "./dist",
 		"lib": ["ESNext"],
-		"target": "ES2021",
+		"paths": { "tslib": ["../node_modules/tslib/tslib.d.ts"] },
+		
+		"target": "ESNext",
 		"useDefineForClassFields": true,
-		"rootDir": "src",
-		"plugins": [{ "transform": "ts-transformer-keys/transformer" }]
+		"rootDir": "src"
 	}
 }

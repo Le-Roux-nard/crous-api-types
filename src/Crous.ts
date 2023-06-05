@@ -1,23 +1,47 @@
 import { Actualites } from "./Actualites.js";
 import { Residence } from "./Residence.js";
+import ResourceManager from "./ResourceManager.js";
 import { Restaurant } from "./Restaurant.js";
 
-export class Crous {
-	nom = "";
-	id = "";
-	restaurants: Restaurant[] = [];
-	actualites: Actualites[] = [];
-	residences: Residence[] = [];
+export interface Crous {
+	nom: string;
+	id: string;
+	restaurants: ResourceManager<Restaurant>;
+	actualites: ResourceManager<Actualites>;
+	residences: ResourceManager<Residence>;
+}
 
-	getRestaurant(id: string): Restaurant | undefined {
-		return this.restaurants.find((r) => r.id === id);
-	}
+enum CrousNames {
+	AIX_MARSEILLE = "aix.marseille",
+	AMIENS = "amiens",
+	ANTILLES_GUYANE = "antilles.guyane",
+	BOURGOGNE_FRANCHE_COMTE = "bfc",
+	BORDEAUX = "bordeaux",
+	CLERMONT_FERRAND = "clermont.ferrand",
+	CORTE = "corte",
+	CRETEIL = "creteil",
+	GRENOBLE = "grenoble",
+	LILLE = "lille",
+	LIMOGES = "limoges",
+	LYON = "lyon",
+	MONTPELLIER = "montpellier",
+	NANCY_METZ = "nancy.metz",
+	NANTES = "nantes",
+	NICE = "nice",
+	NORMANDIE = "normandie",
+	ORLEANS_TOURS = "orleans.tours",
+	PARIS = "paris",
+	POITIERS = "poitiers",
+	REIMS = "reims",
+	RENNES = "rennes",
+	REUNION = "reunion",
+	STRASBOURG = "strasbourg",
+	TOULOUSE = "toulouse",
+	VERSAILLES = "versailles",
+}
 
-	getResidence(id: string): Residence | undefined {
-		return this.residences.find((r) => r.id === id);
-	}
+type CrousName = (typeof CrousNames)[keyof typeof CrousNames];
 
-	getActualite(id: string): Actualites | undefined {
-		return this.actualites.find((r) => r.id === id);
-	}
+export function isCrousName(value: string): value is CrousName {
+	return Object.values(CrousNames).includes(value as CrousName);
 }
