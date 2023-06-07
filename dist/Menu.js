@@ -1,32 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Menu = void 0;
-const DonneesCrous_js_1 = require("./DonneesCrous.js");
-class Menu extends DonneesCrous_js_1.CrousData {
-    constructor() {
-        super(...arguments);
-        Object.defineProperty(this, "date", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "horaire", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "plats", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-    }
-    keys() {
-        return ["date", "horaire", "plats", "keys", "toJSON", "isToday", "id"].filter((k) => typeof this[k] !== "function" && k !== "id");
-    }
+import { __decorate, __metadata } from "tslib";
+import { CrousData } from "./CrousData.js";
+import { keepToJson } from "./Utils.js";
+export class Menu extends CrousData {
+    date;
+    horaire;
+    plats;
     toJSON() {
         const jsonifiedThis = super.toJSON();
         for (const key of Object.keys(jsonifiedThis)) {
@@ -40,5 +18,16 @@ class Menu extends DonneesCrous_js_1.CrousData {
         return new Date().toISOString().split("T")[0] === this.date;
     }
 }
-exports.Menu = Menu;
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Menu.prototype, "date", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Menu.prototype, "horaire", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Map)
+], Menu.prototype, "plats", void 0);
 //# sourceMappingURL=Menu.js.map

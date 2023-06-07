@@ -6,7 +6,8 @@
   "exports": "./dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "npx rimraf dist/ types/ && tsc"
+    "rimraf": "node -e \"const {rimraf} = require('rimraf'); rimraf('./dist/'); rimraf('./types/')\"",
+    "build": "npm run rimraf && tsc"
   },
   "author": "Le_Roux-Nard",
   "license": "MIT",
@@ -25,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/Le-Roux-nard/crous-api-types/issues"
   },
-  "homepage": "https://github.com/Le-Roux-nard/crous-api-types#readme"
+  "homepage": "https://github.com/Le-Roux-nard/crous-api-types#readme",
+  "devDependencies": {
+    "rimraf": "^5.0.1"
+  }
+
 }

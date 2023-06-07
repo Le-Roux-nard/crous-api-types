@@ -1,48 +1,33 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Crous = void 0;
-class Crous {
-    constructor() {
-        Object.defineProperty(this, "nom", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: ""
-        });
-        Object.defineProperty(this, "id", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: ""
-        });
-        Object.defineProperty(this, "restaurants", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: []
-        });
-        Object.defineProperty(this, "actualites", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: []
-        });
-        Object.defineProperty(this, "residences", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: []
-        });
-    }
-    getRestaurant(id) {
-        return this.restaurants.find((r) => r.id === id);
-    }
-    getResidence(id) {
-        return this.residences.find((r) => r.id === id);
-    }
-    getActualite(id) {
-        return this.actualites.find((r) => r.id === id);
-    }
+var CrousNames;
+(function (CrousNames) {
+    CrousNames["AIX_MARSEILLE"] = "aix.marseille";
+    CrousNames["AMIENS"] = "amiens";
+    CrousNames["ANTILLES_GUYANE"] = "antilles.guyane";
+    CrousNames["BOURGOGNE_FRANCHE_COMTE"] = "bfc";
+    CrousNames["BORDEAUX"] = "bordeaux";
+    CrousNames["CLERMONT_FERRAND"] = "clermont.ferrand";
+    CrousNames["CORTE"] = "corte";
+    CrousNames["CRETEIL"] = "creteil";
+    CrousNames["GRENOBLE"] = "grenoble";
+    CrousNames["LILLE"] = "lille";
+    CrousNames["LIMOGES"] = "limoges";
+    CrousNames["LYON"] = "lyon";
+    CrousNames["MONTPELLIER"] = "montpellier";
+    CrousNames["NANCY_METZ"] = "nancy.metz";
+    CrousNames["NANTES"] = "nantes";
+    CrousNames["NICE"] = "nice";
+    CrousNames["NORMANDIE"] = "normandie";
+    CrousNames["ORLEANS_TOURS"] = "orleans.tours";
+    CrousNames["PARIS"] = "paris";
+    CrousNames["POITIERS"] = "poitiers";
+    CrousNames["REIMS"] = "reims";
+    CrousNames["RENNES"] = "rennes";
+    CrousNames["REUNION"] = "reunion";
+    CrousNames["STRASBOURG"] = "strasbourg";
+    CrousNames["TOULOUSE"] = "toulouse";
+    CrousNames["VERSAILLES"] = "versailles";
+})(CrousNames || (CrousNames = {}));
+export function isCrousName(value) {
+    return Object.values(CrousNames).includes(value);
 }
-exports.Crous = Crous;
 //# sourceMappingURL=Crous.js.map

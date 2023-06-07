@@ -4,6 +4,6 @@ declare enum HolidaysZones {
     "Zone C" = 2,
     "Polynésie" = 3
 }
-export declare type HolidayZone = keyof typeof HolidaysZones;
+export type HolidayZone = keyof typeof HolidaysZones;
 export {};
 //# sourceMappingURL=HolidayZones.d.ts.map

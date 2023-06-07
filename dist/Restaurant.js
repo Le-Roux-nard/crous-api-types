@@ -1,76 +1,20 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Restaurant = void 0;
-const DonneesCrous_js_1 = require("./DonneesCrous.js");
-class Restaurant extends DonneesCrous_js_1.CrousData {
-    constructor() {
-        super(...arguments);
-        Object.defineProperty(this, "nom", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "short_desc", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "opening", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "position", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "type", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "contact", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "horaires", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "moyen_acces", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "paiements", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-        Object.defineProperty(this, "menus", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: void 0
-        });
-    }
+import { __decorate, __metadata } from "tslib";
+import { CrousData } from "./CrousData.js";
+import { Position } from "./Position.js";
+import { keepToJson } from "./Utils.js";
+export class Restaurant extends CrousData {
+    nom;
+    short_desc;
+    opening;
+    position;
+    type;
+    contact;
+    horaires;
+    moyen_acces;
+    paiements;
+    menus;
     getTodayMenu() {
         return this.menus?.find((menu) => menu.isToday());
-    }
-    keys() {
-        return ["nom", "short_desc", "opening", "position", "type", "contact", "horaires", "moyen_acces", "paiements", "menus", "getTodayMenu", "keys", "toJSON", "id"].filter((k) => typeof this[k] !== "function");
     }
     toJSON() {
         const jsonifiedThis = super.toJSON();
@@ -78,5 +22,44 @@ class Restaurant extends DonneesCrous_js_1.CrousData {
         return jsonifiedThis;
     }
 }
-exports.Restaurant = Restaurant;
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Restaurant.prototype, "nom", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Restaurant.prototype, "short_desc", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Array)
+], Restaurant.prototype, "opening", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Position)
+], Restaurant.prototype, "position", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Restaurant.prototype, "type", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Object)
+], Restaurant.prototype, "contact", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Restaurant.prototype, "horaires", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", String)
+], Restaurant.prototype, "moyen_acces", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Array)
+], Restaurant.prototype, "paiements", void 0);
+__decorate([
+    keepToJson,
+    __metadata("design:type", Array)
+], Restaurant.prototype, "menus", void 0);
 //# sourceMappingURL=Restaurant.js.map
