@@ -1,4 +1,4 @@
-import { CrousData } from "./DonneesCrous.js";
+import { CrousData } from "./CrousData.js";
 import { Menu } from "./Menu.js";
 import { Opening } from "./Opening.js";
 import { Position } from "./Position.js";
@@ -14,8 +14,8 @@ export declare class Restaurant extends CrousData {
     moyen_acces?: String;
     paiements?: String[];
     menus?: Menu[];
+    id: string;
     getTodayMenu(): Menu | undefined;
-    keys(): (keyof this)[];
     toJSON(): any;
 }
 //# sourceMappingURL=Restaurant.d.ts.map

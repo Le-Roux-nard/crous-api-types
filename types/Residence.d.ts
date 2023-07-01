@@ -1,4 +1,4 @@
-import { CrousData } from "./DonneesCrous.js";
+import { CrousData } from "./CrousData.js";
 import { Position } from "./Position.js";
 export declare class Residence extends CrousData {
     name: string;
@@ -14,6 +14,6 @@ export declare class Residence extends CrousData {
     virtualVisitUrl?: string;
     bookingUrl?: string;
     troubleshootingUrl?: string;
-    keys(): (keyof this)[];
+    id: string;
 }
 //# sourceMappingURL=Residence.d.ts.map

@@ -1,15 +1,13 @@
-import { CrousData } from "./DonneesCrous.js";
-import { keys } from "ts-transformer-keys";
+import { CrousData } from "./CrousData.js";
+import { keepToJson } from "./Utils.js";
 
 export class Menu extends CrousData {
+	@keepToJson
 	date!: string;
+	@keepToJson
 	horaire!: string;
+	@keepToJson
 	plats!: Map<String, string[]>;
-
-	keys(): (keyof this)[] {
-		return keys<typeof this>().filter((k) => typeof this[k as keyof typeof this] !== "function" && k !== "id");
-	}
-
 	
 	override toJSON() {
 		const jsonifiedThis = super.toJSON();

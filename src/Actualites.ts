@@ -1,15 +1,19 @@
-import { CrousData } from "./DonneesCrous.js";
-import { keys } from "ts-transformer-keys";
+import { CrousData } from "./CrousData.js";
+import { keepToJson } from "./Utils.js";
 
 export class Actualites extends CrousData {
+	@keepToJson
 	titre!: String;
+	@keepToJson
 	date!: String;
+	@keepToJson
 	category!: String;
+	@keepToJson
 	image!: String;
+	@keepToJson
 	content!: String;
+	@keepToJson
 	type!: string;
 
-	keys() {
-		return keys<typeof this>().filter((k) => typeof this[k as keyof typeof this] !== "function");
-	}
+	declare id: string;
 }

@@ -1,4 +1,4 @@
-import { CrousData } from "./DonneesCrous.js";
+import { CrousData } from "./CrousData.js";
 export declare class Actualites extends CrousData {
     titre: String;
     date: String;
@@ -6,6 +6,6 @@ export declare class Actualites extends CrousData {
     image: String;
     content: String;
     type: string;
-    keys(): (keyof this)[];
+    id: string;
 }
 //# sourceMappingURL=Actualites.d.ts.map
