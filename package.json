@@ -1,7 +1,7 @@
 {
   "name": "crous-api-types",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Types for crous-api api & wrapper",
   "exports": "./dist/index.js",
   "types": "types/index.d.ts",
